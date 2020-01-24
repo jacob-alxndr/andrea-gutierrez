@@ -1,4 +1,6 @@
 export const elements = {
   htmlTag: document.querySelector('html'),
-  aTags: document.querySelectorAll('a'),
+  links: document.querySelectorAll('a'),
+  imgGallery: document.querySelector('.image-gallery'),
+  imgs: document.querySelectorAll('.img-set'),
 };
