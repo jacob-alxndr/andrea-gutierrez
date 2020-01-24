@@ -1,0 +1,9 @@
+body{
+    width: 100vw;
+    height: 100vh;
+
+    main{
+        display: grid;
+        grid-column: col-end 4/col-end 12;
+    }
+}

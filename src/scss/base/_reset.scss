@@ -1,18 +1,65 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-   
-}
-
-html{
-    margin: 0;
-    padding: 0;
+html {
     box-sizing: border-box;
     font-size: 62.5%;
 }
 
-::selection {
-    background-color: $black;
+
+html.open {
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: none;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: block;
+}
+
+::selection{
     color: $white;
+    background-color: $black;
+}
+
+a {
+    color: inherit;
+    background-color: transparent;
+    text-decoration: none;
+
+    &:focus{
+        // border: 1px solid blue;
+    }
+
+}
+
+ul {
+    list-style: none;
+}
+
+button * {
+    pointer-events: none;
+}
+
+img,
+embed,
+iframe,
+object,
+video {
+    display: block;
+    max-width: 100%;
+    border-style: none;
+}
+
+input,
+textarea,
+select,
+button {
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
 }

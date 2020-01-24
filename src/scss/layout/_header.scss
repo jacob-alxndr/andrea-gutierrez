@@ -1,3 +1,49 @@
 .header{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 60vh;
+    grid-column: col-start 1/col-end 4;
+
+    .navigation{
+        display: grid;
+        align-content: center;
+        margin-bottom: 12rem;
+        a{
+            white-space: nowrap;
+            transition: color .2s ease;
+           
+        }
+
+        &__list{
+         
+            & > *:not(:last-child){
+                margin-bottom: .5rem;
+            } 
+
+            &:hover{
+                color: #eee;
+            }
+        }
+
+        &__item{
+            display: flex;
+            justify-content: flex-start;
+
+            a:hover{
+           
+                color: red;
+            }
+
+
+        }
+    }
+
+    .featured{
+    display: flex;
+    justify-content: space-between;
     
+
+    }
 }
