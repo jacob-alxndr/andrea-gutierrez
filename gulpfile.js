@@ -40,7 +40,7 @@ gulp.task('fonts', function() {
 });
 
 gulp.task('images', function() {
-  return gulp.src('src/img/**/*').pipe(gulp.dest('dist/img'));
+  return gulp.src('src/assets/img/**/*').pipe(gulp.dest('dist/assets/img'));
 });
 
 // Run JS through webpack and output to dist + browserSync

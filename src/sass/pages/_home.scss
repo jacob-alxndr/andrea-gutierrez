@@ -1,9 +1,20 @@
 body{
     width: 100vw;
     height: 100vh;
+background-color: rgb(255, 249, 241);
 
     main{
         display: grid;
-        grid-column: col-end 4/col-end 12;
+        grid-column: col-end 4/col-end 11;
+
+        @include respond(tab-port1){
+            grid-column: col-start 5/col-end 12;
+        
+        }
+        @include respond(phone){
+            grid-column: col-start 1/col-end 12;
+        
+        }
+        
     }
 }

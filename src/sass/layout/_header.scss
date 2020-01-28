@@ -4,14 +4,72 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 60vh;
-    grid-column: col-start 1/col-end 4;
-    background-color: red;
+    grid-column: col-start 2/col-end 4;
+    transition: all ease-in-out;
+    // animation: hideTitle 1s ease;
+@include respond(tab-port1){
+    flex-direction: column;
+    margin-top: 5rem;
 
+}
+@include respond(tab-port2){
+    grid-column: col-start 1/col-end 4;
+
+}
+
+@include respond(phone){
+    grid-column: col-start 1/col-end 12;
+    margin: 0;
+
+}
+
+    .heading{
+     
+        // font-weight: bolder;
+     
+        animation: fadeIn .6s ease-in-out;
+
+        @include respond(tab-port1){
+            margin-bottom: 2rem;
+        
+        }
+
+        @include respond(phone){
+            margin-top: 3rem;
+        }
+
+    &.hide{
+        transform: translateX(-100vw);
+    }
+    }
+
+    .wrapper{
+        display: flex;
+        height: 100%;
+        // background-color: red;
+
+        flex-direction: column;
+        justify-content: space-between;
+        // align-content: space-between;
+        animation: fadeIn .8s ease-in-out;
+
+        @include respond(tab-port1){
+            justify-content: start;
+        }
+    }
     .navigation{
         display: grid;
-        align-content: center;
-        margin-bottom: 12rem;
+        // align-content: center;
+
+        align-items: space-around;
+        // margin-bottom: 15rem;
+
+        @include respond(phone){
+            margin-bottom: 3rem;
+        }
+   
         a{
+        
             white-space: nowrap;
             transition: color .2s ease;
            
@@ -24,7 +82,7 @@
             } 
 
             &:hover{
-                color: #eee;
+                color: rgb(219, 206, 188);
             }
         }
 
@@ -34,7 +92,7 @@
 
             a:hover{
            
-                color: red;
+                color: rgb(95, 69, 32);
             }
 
 
@@ -44,7 +102,16 @@
     .featured{
     display: flex;
     justify-content: space-between;
-    
+    margin-bottom: 6rem;
+    @include respond(phone){
+        display: none;
 
+    }
+    h6{   margin-right: 1rem;;}
+
+    }
+
+    @include respond(phone){
+        margin: 0;
     }
 }
