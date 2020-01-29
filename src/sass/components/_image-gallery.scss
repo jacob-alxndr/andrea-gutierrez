@@ -1,7 +1,7 @@
 .image-gallery{
     position: relative;
 
-    margin: 5rem 0 5rem 5rem;
+    // margin: 5rem 0 5rem 5rem;
     // background-color: rgb(14, 2, 83);
     animation: fadeIn 1s ease-in-out;
 
@@ -17,7 +17,7 @@
  
 .img-set{
     opacity: 0;
-    width:50rem;
+    width:48rem;
     @include center;
     cursor: pointer;
 
@@ -58,7 +58,7 @@
 &.top-left{
     top:0;
     left:10rem;
-    width: 50%;
+    width: 45%;
     transform: translate(0,0);
     // margin: 4rem;
 
@@ -67,7 +67,7 @@
 &.top-right{
     top:0;
     right:10rem;
-    width: 50%;
+    width: 45%;
     transform: translate(0,0);
 
 
@@ -75,7 +75,7 @@
 &.bottom-left{
     bottom:0;
     left:10rem;
-    width: 50%;
+    width: 45%;
     transform: translate(0,-50%);
     // margin: 4rem;
 
@@ -84,7 +84,7 @@
 &.bottom-right{
     bottom:0;
     right:10rem;
-    width: 50%;
+    width: 45%;
     transform: translate(0,-50%);
 
 
