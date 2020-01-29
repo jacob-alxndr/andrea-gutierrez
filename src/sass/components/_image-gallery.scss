@@ -55,6 +55,16 @@
         cursor: pointer;
         animation: fadeIn .5s;
     }
+    &.resize{
+        opacity: 1;
+        width: 100%;
+        transform: translate(0,0);
+        top:0;
+        left: 0;
+        position: static;
+
+    }
+
 &.top-left{
     top:0;
     left:10rem;

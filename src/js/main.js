@@ -2,3 +2,4 @@
 
 import test from './modules/test';
 import slides from './modules/slides';
+import resize from './modules/resize';

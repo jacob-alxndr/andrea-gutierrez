@@ -198,6 +198,14 @@ body {
       cursor: pointer;
       -webkit-animation: fadeIn .5s;
               animation: fadeIn .5s; }
+    .image-gallery .img-set.resize {
+      opacity: 1;
+      width: 100%;
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0);
+      top: 0;
+      left: 0;
+      position: static; }
     .image-gallery .img-set.top-left {
       top: 0;
       left: 10rem;
