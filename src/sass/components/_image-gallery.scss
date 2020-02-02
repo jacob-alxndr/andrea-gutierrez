@@ -29,22 +29,16 @@
     cursor: pointer;
 
     @include respond(tab-port1){
-        width: 100%;
-        transform: translate(0,0);
-        top: 0;
-        left: 0;
-    }
-
-    @include respond(phone){
         opacity: 1;
+        width: 100%;
         position: relative;
+        transform: translate(0,0);
         top: 0;
         left: 0;
-        transform: translate(0,0);
         margin-bottom: 3rem;
         pointer-events: none;
-
     }
+
 
     
 

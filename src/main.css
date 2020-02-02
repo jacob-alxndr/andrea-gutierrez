@@ -233,19 +233,13 @@ body {
     cursor: pointer; }
     @media only screen and (max-width: 60em) {
       .image-gallery .img-set {
+        opacity: 1;
         width: 100%;
+        position: relative;
         -webkit-transform: translate(0, 0);
                 transform: translate(0, 0);
-        top: 0;
-        left: 0; } }
-    @media only screen and (max-width: 37.5em) {
-      .image-gallery .img-set {
-        opacity: 1;
-        position: relative;
         top: 0;
         left: 0;
-        -webkit-transform: translate(0, 0);
-                transform: translate(0, 0);
         margin-bottom: 3rem;
         pointer-events: none; } }
     .image-gallery .img-set img {
