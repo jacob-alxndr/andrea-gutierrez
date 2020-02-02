@@ -63,6 +63,9 @@ header.portfolio{
             grid-row-gap: 10rem;
             align-content: flex-start;
           
+            @include respond(tab-port1){
+                grid-row-gap: 3rem;
+            }
 
             :nth-child(odd){
                 grid-column: gallery-start /gal-end 6;
@@ -132,7 +135,7 @@ header.portfolio{
                 }
 
                 span{
-                    width: 2rem;
+                    width: 3rem;
                     height: min-content;
                     transform: rotateZ(-90deg);
                     white-space: nowrap;
@@ -140,6 +143,8 @@ header.portfolio{
                     animation: fade 1.8s ease-in-out;
 
                     @include respond(phone){
+                        width: 100%;
+                        white-space: normal;
                         transform: rotateZ(0deg);
                         margin: 1rem 0 0 0;
                         animation: fade 1.2s ease-in-out;

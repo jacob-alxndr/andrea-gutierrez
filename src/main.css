@@ -211,9 +211,7 @@ body {
 
 .image-gallery {
   opacity: 1;
-  position: relative;
-  -webkit-animation: fadeIn 1s ease-in-out;
-          animation: fadeIn 1s ease-in-out; }
+  position: relative; }
   .image-gallery.animate {
     opacity: 1;
     -webkit-animation: fade 1.5s ease-in-out;
@@ -510,6 +508,9 @@ main.portfolio {
     grid-template-columns: [gallery-start] 1fr [content] repeat(6, [gal-start] 1fr [gal-end]) [content-end] 1fr [gallery-end];
     grid-row-gap: 10rem;
     align-content: flex-start; }
+    @media only screen and (max-width: 60em) {
+      main.portfolio .image-gallery {
+        grid-row-gap: 3rem; } }
     main.portfolio .image-gallery :nth-child(odd) {
       grid-column: gallery-start /gal-end 6; }
     main.portfolio .image-gallery :nth-child(even) {
@@ -564,7 +565,7 @@ main.portfolio {
           -webkit-box-align: start;
                   align-items: flex-start; } }
       main.portfolio .image-gallery .img-set span {
-        width: 2rem;
+        width: 3rem;
         height: -webkit-min-content;
         height: -moz-min-content;
         height: min-content;
@@ -576,6 +577,8 @@ main.portfolio {
                 animation: fade 1.8s ease-in-out; }
         @media only screen and (max-width: 37.5em) {
           main.portfolio .image-gallery .img-set span {
+            width: 100%;
+            white-space: normal;
             -webkit-transform: rotateZ(0deg);
                     transform: rotateZ(0deg);
             margin: 1rem 0 0 0;
