@@ -1,0 +1,173 @@
+
+// HEADER 
+header.portfolio{
+    height: 100%;
+    position: fixed;
+    margin-left: 7rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .heading{
+
+        height: max-content;
+        h5 {
+            margin-bottom: 2rem;
+        }
+     
+
+}
+
+
+    @include respond(phone){
+        position: static;
+        margin:0; 
+        display: grid;
+        grid-column: col-start 1/col-end 12;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+    
+   
+    }
+
+// NAV 
+    .navigation{
+        margin: 0;
+    }
+
+}
+    
+// MAIN 
+    main.portfolio{
+        display: grid;
+        grid-column: col-start 3/col-end 12;
+        // margin: 5rem 0 5rem 5rem;
+
+        @include respond(tab-port1){
+            grid-column: col-start 5/col-end 12;
+        
+        }
+        @include respond(phone){
+            grid-column: col-start 1/col-end 12;
+        
+        }
+
+// IMAGE GALLERY
+        .image-gallery{
+            position: static;
+            margin-bottom: 5rem;
+            display: grid;
+            // grid-template-columns: repeat(auto-fit, minmax(55rem, 1fr));
+            grid-template-columns: [gallery-start] 1fr [content] repeat(6, [gal-start] 1fr [gal-end]) [content-end] 1fr [gallery-end];
+            grid-row-gap: 10rem;
+            align-content: flex-start;
+          
+
+            :nth-child(odd){
+                grid-column: gallery-start /gal-end 6;
+      
+            }
+            :nth-child(even){
+                grid-column: gal-start 4/gal-end 5;
+           
+             
+            }
+
+            :nth-child(3), :nth-child(6), :nth-child(9){
+                grid-column: gal-start 1/gal-end 6;
+             
+          
+            }
+
+            :nth-child(odd), 
+            :nth-child(even), 
+            :nth-child(3), 
+            :nth-child(6), 
+            :nth-child(9){
+                @include respond(tab-port1){
+                    grid-column: gallery-start /gallery-end;
+                    grid-gap: 0rem;
+                
+                }
+            }
+
+// IMAGE SET
+            .img-set{
+                display: flex;
+                align-items: flex-end;
+                opacity: 1;
+                width:40rem;
+                position: static;
+                top:0;
+                left:0;
+                transform: translate(0, 0);    
+                cursor: default;
+
+                &:hover img{
+                    @include boxShadow;
+                    transform: translateY(-10px);
+                }
+
+        
+            
+                @include respond(tab-port1){
+                    width: 100%;
+                    transform: translate(0,0);
+                    top: 0;
+                    left: 0;
+                }
+            
+                @include respond(phone){
+                    opacity: 1;
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    transform: translate(0,0);
+                    margin-bottom: 0rem;
+                    pointer-events: none;
+                    flex-direction: column-reverse;
+                    align-items: flex-start;
+            
+                }
+
+                span{
+                    width: 2rem;
+                    height: min-content;
+                    transform: rotateZ(-90deg);
+                    white-space: nowrap;
+                    margin-right: 2rem;
+                    animation: fade 1.8s ease-in-out;
+
+                    @include respond(phone){
+                        transform: rotateZ(0deg);
+                        margin: 1rem 0 0 0;
+                        animation: fade 1.2s ease-in-out;
+                    }
+                }
+            
+                
+            
+                img{
+                    width: 100%;
+                    cursor: pointer;
+                    animation: fadeIn 1.2s ease-in-out;
+                    transition: all .5s;
+                    @include respond(phone){
+                        pointer-events: none;
+             
+                
+                    }
+                }
+            }
+
+
+            
+
+            
+        }
+        
+    }
+
+
+    

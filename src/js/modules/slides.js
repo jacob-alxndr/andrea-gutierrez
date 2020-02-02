@@ -2,7 +2,7 @@ import { elements } from './DOMelements';
 
 // 1. Selectors
 // console.log(window.innerHeight)
-if (window.innerWidth >= 850) {
+if (window.innerWidth >= 850 && elements.mainTag.classList.contains('home')) {
   let currentSlide = 0;
   let z = 1;
 

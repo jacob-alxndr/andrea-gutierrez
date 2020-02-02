@@ -4,10 +4,10 @@ html {
 }
 
 
-html.open {
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: none;
-}
+// html.open {
+//     overflow-y: hidden;
+//     -webkit-overflow-scrolling: none;
+// }
 
 *,
 *::after,
@@ -16,14 +16,17 @@ html.open {
     margin: 0;
     padding: 0;
 }
+body{
 
+    background-color: $color-primary;
+}
 main {
     display: block;
 }
 
 ::selection{
-    color: $white;
-    background-color: $black;
+    color: $color-primary;
+    background-color:  $color-secondary;
 }
 
 a {

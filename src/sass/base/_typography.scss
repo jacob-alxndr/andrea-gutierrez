@@ -9,9 +9,12 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing:subpixel-antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color: $color-secondary;
 }
 
-h1 {font-size: $h1;
+h1 {
+    letter-spacing: -3px;
+    font-size: $h1;
     font-weight: 400;}
 
 h2 {font-size: $h2;

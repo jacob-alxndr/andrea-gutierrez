@@ -1,14 +1,13 @@
 // COLORS
-$color-primary: #f1f1f1;
-$color-secondary:#f1f1f1;
-$color-secondary-dark:#f1f1f1;
-$color-tertiary: #f1f1f1;
-$white: #f1f1f1;
-$light-grey: #eee;
-$black:#010101;
+$color-primary: hsl(34, 100%, 97%);
+$color-secondary:hsl(34, 68%, 9%);
+$color-tertiary: hsl(32, 79%, 87%);
+$white: hsl(0, 0%, 95%);
+$light-grey: hsl(0, 0%, 93%);
+$black:hsl(0, 0%, 0%);
 
-$light-text: rgb(80, 80, 80);
-$dark-text: #222;
+$light-text: hsl(0, 0%, 31%);
+$dark-text: hsl(0, 0%, 13%);
 
 //FONTS
 $h1: 4.883rem;

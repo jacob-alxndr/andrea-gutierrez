@@ -64,7 +64,7 @@
 
 //MIXINS
 @mixin boxShadow() {
-    box-shadow: 0 0 10px rgba(0,0,0,.15);
+    box-shadow: 2px 5px 13px rgba(0,0,0,.15);
 }
 
 @mixin pseudo(){

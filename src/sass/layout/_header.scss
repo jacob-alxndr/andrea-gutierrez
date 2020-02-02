@@ -4,11 +4,21 @@
     justify-content: space-between;
     align-items: center;
     grid-column: col-start 1/col-end 4;
+    opacity: 1;
     transition: all ease-in-out;
-    // animation: hideTitle 1s ease;
+    animation: fade 1.5s ease-in-out;
+   
+
+
+
+    &.animate{
+        opacity: 1;
+        animation: fade 1.5s ease-in-out;
+    }
+
 @include respond(tab-port1){
     flex-direction: column;
-    // margin-top: 5rem;
+
 
 }
 @include respond(tab-port2){
@@ -20,6 +30,7 @@
     grid-column: col-start 1/col-end 12;
     margin: 0;
     align-items: flex-start;
+    padding: 3rem 0;
 
 }
 
@@ -31,27 +42,25 @@
     span{
         font-size: 1.2rem;
         color: $light-text;
+     
 
-    @include respond(phone){
-        display: none;
+        @include respond(phone){
+            display: none;
+
+        }
+    }
+    @include respond(tab-port1){
+        height: max-content;
 
     }
-    }
+    
 }
 
     h5{
-     
-        // font-weight: bolder;
-     
-        animation: fadeIn .6s ease-in-out;
-
+    
         @include respond(tab-port1){
             margin-bottom: 2rem;
         
-        }
-
-        @include respond(phone){
-            margin-top: 3rem;
         }
 
     &.hide{
@@ -67,53 +76,13 @@
         flex-direction: column;
         justify-content: flex-end;
         // align-content: space-between;
-        animation: fadeIn .8s ease-in-out;
+
 
         @include respond(tab-port1){
             justify-content: start;
         }
     }
-    .navigation{
-        display: grid;
-        // align-content: center;
-
-        align-items: space-around;
-        margin-bottom: 23rem;
-
-        @include respond(phone){
-            margin-bottom: 3rem;
-        }
-   
-        a{
-        
-            white-space: nowrap;
-            transition: color .2s ease;
-           
-        }
-
-        &__list{
-         
-            & > *:not(:last-child){
-                margin-bottom: .5rem;
-            } 
-
-            &:hover{
-                color: rgb(219, 206, 188);
-            }
-        }
-
-        &__item{
-            display: flex;
-            justify-content: flex-start;
-
-            a:hover{
-           
-                color: rgb(95, 69, 32);
-            }
-
-
-        }
-    }
+  
 
     .featured{
     display: flex;
