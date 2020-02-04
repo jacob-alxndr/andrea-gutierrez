@@ -427,7 +427,7 @@ body {
   display: grid;
   -webkit-box-align: space-around;
           align-items: space-around;
-  margin-bottom: 23rem; }
+  margin-bottom: 24rem; }
   @media only screen and (max-width: 60em) {
     .navigation {
       margin-bottom: 0rem; } }
