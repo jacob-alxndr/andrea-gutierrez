@@ -5,7 +5,7 @@ header.portfolio{
     position: fixed;
     margin-left: 7rem;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
 
     .heading{
@@ -64,7 +64,8 @@ header.portfolio{
             align-content: flex-start;
           
             @include respond(tab-port1){
-                grid-row-gap: 3rem;
+                grid-row-gap: 4rem;
+            
             }
 
             :nth-child(odd){
@@ -135,11 +136,12 @@ header.portfolio{
                 }
 
                 span{
-                    width: 3rem;
-                    height: min-content;
+                    width: 0;
+                    height: 1px;
                     transform: rotateZ(-90deg);
                     white-space: nowrap;
-                    margin-right: 2rem;
+                    margin-right: 3rem;
+                    // margin-bottom: 1rem;
                     animation: fade 1.8s ease-in-out;
 
                     @include respond(phone){

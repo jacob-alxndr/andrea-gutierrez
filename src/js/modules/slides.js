@@ -33,7 +33,7 @@ if (window.innerWidth >= 850 && elements.mainTag.classList.contains('home')) {
       const randomY = Math.floor(Math.random() * 4 + 1) * 25;
 
       // console.log(randomY);
-      // img.style.transform = `translate(${randomX}px, ${randomY}px)`;
+      // img.style.transform = `translate(${randomX}px, ${randomY}px)`
       // img.style.width = `50%`;
       if (i === 1) {
         img.classList.add('top-left');
@@ -63,10 +63,14 @@ if (window.innerWidth >= 850 && elements.mainTag.classList.contains('home')) {
       moveImage();
       updateImage();
     }
-    elements.span.innerHTML = `0${currentSlide + 1} / 0${elements.imgs.length}`;
+    elements.span.innerHTML = ` 0${currentSlide + 1} / 0${
+      elements.imgs.length
+    }`;
   };
 
   // 3. Events
   elements.imgGallery.addEventListener('click', handleSlides);
   window.addEventListener('keydown', handleSlides);
+  window.addEventListener('load', handleSlides);
 }
+console.log(window);

@@ -102,18 +102,18 @@ html {
   padding: 0; }
 
 body {
-  background-color: #fff8f0; }
+  background-color: #f2f2f2; }
 
 main {
   display: block; }
 
 ::-moz-selection {
   color: #fff8f0;
-  background-color: #271907; }
+  background-color: #2e2e2e; }
 
 ::selection {
   color: #fff8f0;
-  background-color: #271907; }
+  background-color: #2e2e2e; }
 
 a {
   color: inherit;
@@ -143,15 +143,20 @@ button {
   font: inherit;
   letter-spacing: inherit; }
 
+@font-face {
+  font-family: "JetBrains Mono";
+  font-weight: 400;
+  src: url(./assets/fonts/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf); }
+
 body {
-  font-family: 'JetBrains Mono', sans-serif;
+  font-family: "JetBrains Mono", sans-serif;
   font-size: 1.4rem;
   line-height: 1.5;
   color: #212121;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #271907; }
+  color: #2e2e2e; }
 
 h1 {
   letter-spacing: -3px;
@@ -172,7 +177,7 @@ h4 {
 
 h5 {
   font-family: 'Times New Roman', Times, serif;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 800; }
 
 h6 {
@@ -180,14 +185,17 @@ h6 {
   font-weight: 400; }
 
 a {
-  font-size: 1.4rem; }
+  font-size: 1.1rem; }
+
+span {
+  font-size: 1.1rem; }
 
 .paragraph {
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.3; }
   .paragraph__small {
-    font-size: 1.2rem; }
+    font-size: 1rem; }
   .paragraph__grey {
     color: #4f4f4f; }
 
@@ -300,7 +308,7 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: #fff8f0;
-  color: #271907;
+  color: #2e2e2e;
   -webkit-animation: fadeIn 1.3s ease-in-out;
           animation: fadeIn 1.3s ease-in-out;
   -webkit-transition: all 1.3s ease-in-out;
@@ -345,14 +353,21 @@ body {
             animation: fade 1.5s ease-in-out; }
   @media only screen and (max-width: 60em) {
     .header {
+      position: fixed;
+      margin-left: 6rem;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
-              flex-direction: column; } }
+              flex-direction: column;
+      -webkit-box-align: start;
+              align-items: flex-start;
+      grid-column: col-start 1/col-end 2; } }
   @media only screen and (max-width: 42em) {
     .header {
-      grid-column: col-start 1/col-end 4; } }
+      grid-column: col-start 1/col-end 2; } }
   @media only screen and (max-width: 37.5em) {
     .header {
+      position: relative;
+      margin-left: 0;
       grid-column: col-start 1/col-end 12;
       margin: 0;
       -webkit-box-align: start;
@@ -405,7 +420,7 @@ body {
     @media only screen and (max-width: 37.5em) {
       .header .featured {
         display: none; } }
-    .header .featured h6 {
+    .header .featured p {
       margin-right: 1rem; }
 
 .navigation {
@@ -422,11 +437,11 @@ body {
     transition: all .2s ease;
     border-bottom: 1px solid transparent; }
     .navigation a.selected {
-      border-bottom: 1px solid #271907; }
+      border-bottom: 1px solid #2e2e2e; }
   .navigation__list > *:not(:last-child) {
     margin-bottom: .5rem; }
   .navigation__list:hover {
-    color: #f8e0c4; }
+    color: #d9d9d9; }
     .navigation__list:hover a {
       border-bottom: 1px solid transparent; }
   .navigation__item {
@@ -435,8 +450,8 @@ body {
     -webkit-box-pack: start;
             justify-content: flex-start; }
     .navigation__item a:hover {
-      color: #271907;
-      border-bottom: 1px solid #271907; }
+      color: #2e2e2e;
+      border-bottom: 1px solid #2e2e2e; }
 
 body {
   padding: 5rem 0 5rem 0rem;
@@ -461,8 +476,8 @@ header.portfolio {
   margin-left: 7rem;
   -webkit-box-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column; }
@@ -504,7 +519,7 @@ main.portfolio {
     align-content: flex-start; }
     @media only screen and (max-width: 60em) {
       main.portfolio .image-gallery {
-        grid-row-gap: 3rem; } }
+        grid-row-gap: 4rem; } }
     main.portfolio .image-gallery :nth-child(odd) {
       grid-column: gallery-start /gal-end 6; }
     main.portfolio .image-gallery :nth-child(even) {
@@ -559,14 +574,12 @@ main.portfolio {
           -webkit-box-align: start;
                   align-items: flex-start; } }
       main.portfolio .image-gallery .img-set span {
-        width: 3rem;
-        height: -webkit-min-content;
-        height: -moz-min-content;
-        height: min-content;
+        width: 0;
+        height: 1px;
         -webkit-transform: rotateZ(-90deg);
                 transform: rotateZ(-90deg);
         white-space: nowrap;
-        margin-right: 2rem;
+        margin-right: 3rem;
         -webkit-animation: fade 1.8s ease-in-out;
                 animation: fade 1.8s ease-in-out; }
         @media only screen and (max-width: 37.5em) {
