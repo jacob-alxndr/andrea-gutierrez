@@ -413,7 +413,7 @@ body {
     display: flex;
     -webkit-box-pack: justify;
             justify-content: space-between;
-    margin-bottom: 3rem; }
+    margin-bottom: 1rem; }
     @media only screen and (max-width: 60em) {
       .header .featured {
         margin: 3rem 0 0 0; } }
@@ -427,7 +427,7 @@ body {
   display: grid;
   -webkit-box-align: space-around;
           align-items: space-around;
-  margin-bottom: 24rem; }
+  margin-bottom: 26rem; }
   @media only screen and (max-width: 60em) {
     .navigation {
       margin-bottom: 0rem; } }

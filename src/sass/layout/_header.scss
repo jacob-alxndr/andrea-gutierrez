@@ -94,7 +94,7 @@
     .featured{
     display: flex;
     justify-content: space-between;
-        margin-bottom: 3rem;;
+        margin-bottom: 1rem;;
 
     @include respond(tab-port1){
         margin: 3rem 0 0 0;
