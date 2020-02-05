@@ -601,3 +601,48 @@ main.portfolio {
         @media only screen and (max-width: 37.5em) {
           main.portfolio .image-gallery .img-set img {
             pointer-events: none; } }
+
+.header.contact {
+  margin-left: 7rem;
+  grid-column: page-start/ col-end 6;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: initial;
+          justify-content: initial;
+  -webkit-box-align: initial;
+          align-items: initial; }
+  .header.contact .heading {
+    height: 55%;
+    -webkit-box-align: end;
+            align-items: flex-end; }
+    .header.contact .heading h5 {
+      margin-bottom: 2rem; }
+
+.nav.contact {
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+          justify-content: space-between; }
+  .nav.contact .navigation__list {
+    margin-bottom: 5rem; }
+  @media only screen and (max-width: 60em) {
+    .nav.contact {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column; } }
+  .nav.contact .about {
+    max-width: 30rem; }
+    .nav.contact .about > *:first-child {
+      margin-bottom: 3rem; }
+
+main.contact {
+  grid-column: col-start 12/col-end 12;
+  align-content: flex-start;
+  white-space: nowrap; }
+  main.contact .about {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%); }
