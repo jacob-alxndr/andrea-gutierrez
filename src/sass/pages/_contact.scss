@@ -1,55 +1,54 @@
-// HEADER 
+// // HEADER 
 .header.contact{
-    margin-left: 7rem;
-    grid-column: page-start/ col-end 6;
-    flex-direction: column;
-    // align-content: flex-start;
-    justify-content: initial;
-    align-items: initial;
 
-    .heading{
-        height: 55%;
-        align-items: flex-end;
-        h5 {
-            margin-bottom: 2rem;
-        }
-    }
+    // @include respond(phone){
+    //     grid-column: col-start 1 /col-end 12;
+    // }
 }
 
-
-//NAV
-
-.nav.contact{
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-
-    & .navigation__list{
-        margin-bottom: 5rem;
-    }
-    @include respond(tab-port1){
-        flex-direction: column;
-    }
-
-    .about{
-        max-width: 30rem;
-        
-        & > *:first-child{
-            margin-bottom: 3rem;
-        }
-
-      
-    }
-}
-// MAIN
+// // // MAIN
 
 main.contact{
-    grid-column: col-start 12/col-end 12;
-    align-content: flex-start;
-    white-space: nowrap;
+    grid-column: col-start 4 /col-end 10;
+    // align-items: center;
+    // // justify-content: center;
+    // display: none;
+    @include respond(tab-port2){
+        grid-column: col-start 5 /col-end 9;
+    }
+    @include respond(phone){
+        grid-column: col-start 1 /col-end 12;
+    }
 
   .about{
-    transform: translateY(50%);
+    // margin-top: 8rem;  
+    position: fixed;
+        top:48.5vh;
+    max-width: 36rem;
+
+    &>*:first-child{
+        margin-bottom: 2rem;
+    }
+
+    @include respond(tab-port2){
+        max-width: 30rem;
+    }
+
+    @include respond(phone){
+        position: static;
+        top:0;
+        max-width: 40rem;
+    }
+
   }
+}
+
+.thank-you{
+    
+    white-space: nowrap;
+    grid-column: col-start 12 /col-end 12;
+    align-content: flex-start;
+    @include respond(tab-port2){
+        display: none;
+    }
 }

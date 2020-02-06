@@ -9,15 +9,9 @@ body{
 
 }
 
-    // .welcome{
-    //     display: flex;
-    //     align-items: flex-end;
-    //     grid-column: col-start 1/col-end 2;
-    // }
-
     main{
         display: grid;
-        grid-column: col-end 4/col-end 12;
+        grid-column: col-start 4/col-end 12;
         // margin: 5rem 0 5rem 5rem;
 
         @include respond(tab-port1){

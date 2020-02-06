@@ -1,59 +1,19 @@
-
-// HEADER 
-header.portfolio{
-    height: 100%;
-    position: fixed;
-    margin-left: 7rem;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-
-    .heading{
-
-        height: max-content;
-        h5 {
-            margin-bottom: 2rem;
-        }
-     
-
-}
-
-
-    @include respond(phone){
-        position: static;
-        margin:0; 
-        display: grid;
-        grid-column: col-start 1/col-end 12;
-        justify-content: flex-start;
-        align-content: center;
-        align-items: center;
-    
-   
-    }
-
-// NAV 
-    .navigation{
-        margin: 0;
-    }
-
-}
-    
-// MAIN 
+    // MAIN 
     main.portfolio{
-        display: grid;
-        grid-column: col-start 3/col-end 12;
+        // display: grid;
+        // grid-column: col-start 4/col-end 12;
         // margin: 5rem 0 5rem 5rem;
 
-        @include respond(tab-port1){
-            grid-column: col-start 5/col-end 12;
+        // @include respond(tab-port1){
+        //     grid-column: col-start 5/col-end 12;
         
-        }
-        @include respond(phone){
-            grid-column: col-start 1/col-end 12;
+        // }
+        // @include respond(phone){
+        //     grid-column: col-start 1/col-end 12;
         
-        }
+        // }
 
-// IMAGE GALLERY
+// // IMAGE GALLERY
         .image-gallery{
             position: static;
             margin-bottom: 5rem;
@@ -95,13 +55,16 @@ header.portfolio{
                 
                 }
             }
+    
 
-// IMAGE SET
+        }
+
+// // IMAGE SET
             .img-set{
                 display: flex;
                 align-items: flex-end;
                 opacity: 1;
-                width:40rem;
+                width:35rem;
                 position: static;
                 top:0;
                 left:0;
@@ -167,14 +130,11 @@ header.portfolio{
                     }
                 }
             }
-
-
-            
-
             
         }
-        
-    }
+
+
+
 
 
     

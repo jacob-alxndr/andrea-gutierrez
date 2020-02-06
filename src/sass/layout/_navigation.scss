@@ -1,9 +1,7 @@
 .navigation{
     display: grid;
-    // align-content: center;
-
     align-items: space-around;
-    margin-bottom: 26rem;
+    // margin-bottom: 26rem;
 
 
     @include respond(tab-port1){
