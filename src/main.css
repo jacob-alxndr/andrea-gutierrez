@@ -598,7 +598,7 @@ main.contact {
       grid-column: col-start 1 /col-end 12; } }
   main.contact .about {
     position: fixed;
-    top: 48.5vh;
+    top: 45.5vh;
     max-width: 36rem; }
     main.contact .about > *:first-child {
       margin-bottom: 2rem; }
