@@ -28,6 +28,11 @@
             
             }
 
+            @include respond(tab-port1){
+                grid-row-gap: 8rem;
+            
+            }
+
             :nth-child(odd){
                 grid-column: gallery-start /gal-end 6;
       

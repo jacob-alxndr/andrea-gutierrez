@@ -502,6 +502,9 @@ main.portfolio .image-gallery {
   @media only screen and (max-width: 60em) {
     main.portfolio .image-gallery {
       grid-row-gap: 4rem; } }
+  @media only screen and (max-width: 60em) {
+    main.portfolio .image-gallery {
+      grid-row-gap: 8rem; } }
   main.portfolio .image-gallery :nth-child(odd) {
     grid-column: gallery-start /gal-end 6; }
   main.portfolio .image-gallery :nth-child(even) {
