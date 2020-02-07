@@ -17,13 +17,19 @@
         top:45.5vh;
         flex-direction: column;
 
+        h5{
+            display: none;
+
+            @include respond(phone){
+                display: block;
+            }
+        }
+
         @include respond(phone){
           position: static;
           top:0;
         }
-        h5{
-            margin-bottom: .5rem;
-        }
+
     }
 }
 
@@ -66,10 +72,7 @@
     max-height: 50vh;
 
     span{
-        font-size: 1.2rem;
-        color: $light-text;
-     
-
+       
         @include respond(phone){
             display: none;
 
@@ -84,7 +87,7 @@
 }
 
     h5{
-        
+        white-space: nowrap;
     &.hide{
         transform: translateX(-100vw);
     }
@@ -99,9 +102,11 @@
     @include respond(tab-port1){
         flex-direction: column;
     }
+
+    
     @include respond(phone){
         h5{
-            margin-bottom: .5rem;
+            margin-bottom: 2.5rem;
         }
     }
 }

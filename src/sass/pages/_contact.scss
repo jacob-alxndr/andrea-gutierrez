@@ -1,6 +1,6 @@
 // // HEADER 
 .header.contact{
-
+    grid-column: col-start 1 /col-end 2;
     // @include respond(phone){
     //     grid-column: col-start 1 /col-end 12;
     // }
@@ -9,7 +9,7 @@
 // // // MAIN
 
 main.contact{
-    grid-column: col-start 4 /col-end 10;
+    grid-column: col-start 3 /col-end 6;
     // align-items: center;
     // // justify-content: center;
     // display: none;

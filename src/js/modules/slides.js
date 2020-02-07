@@ -35,15 +35,15 @@ if (window.innerWidth >= 850 && elements.mainTag.classList.contains('home')) {
       // console.log(randomY);
       // img.style.transform = `translate(${randomX}px, ${randomY}px)`
       // img.style.width = `50%`;
-      if (i === 1) {
-        img.classList.add('top-left');
-      } else if (i === 2) {
-        img.classList.add('top-right');
-      } else if (i === 3) {
-        img.classList.add('bottom-left');
-      } else if (i === 4) {
-        img.classList.add('bottom-right');
-      }
+      // if (i === 1) {
+      //   img.classList.add('top-left');
+      // } else if (i === 2) {
+      //   img.classList.add('top-right');
+      // } else if (i === 3) {
+      //   img.classList.add('bottom-left');
+      // } else if (i === 4) {
+      //   img.classList.add('bottom-right');
+      // }
     });
   };
 
