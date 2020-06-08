@@ -264,8 +264,8 @@ body {
     .image-gallery .img-set.inView {
       opacity: 1;
       cursor: pointer;
-      -webkit-animation: fade .7s;
-              animation: fade .7s; }
+      -webkit-animation: fade 0.7s;
+              animation: fade 0.7s; }
     .image-gallery .img-set.resize {
       opacity: 1;
       width: 100%;

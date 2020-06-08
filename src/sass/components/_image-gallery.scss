@@ -1,108 +1,95 @@
-.image-gallery{
+.image-gallery {
+  opacity: 1;
+  position: relative;
+
+  // margin: 5rem 0 5rem 5rem;
+  // background-color: rgb(14, 2, 83);
+  // animation: fadeIn 1.2s ease-in-out;
+
+  &.animate {
     opacity: 1;
-    position: relative;
+    animation: fade 1.5s ease-in-out;
+  }
 
-    // margin: 5rem 0 5rem 5rem;
-    // background-color: rgb(14, 2, 83);
-    // animation: fadeIn 1.2s ease-in-out;
+  @include respond(phone) {
+    margin: 0;
+  }
 
-    &.animate{
-        opacity: 1;
-        animation: fade 1.5s ease-in-out;
-    }
+  // @include test;
+  & .img-set:first-child {
+    z-index: 1;
+    opacity: 1;
+  }
 
-    @include respond(phone){
-        margin: 0;
-    }
-
-    // @include test;
-    & .img-set:first-child{
-        z-index: 1;
-        opacity: 1;
-    }
- 
-.img-set{
+  .img-set {
     opacity: 0;
-    width:48rem;
+    width: 48rem;
+    // height: 30rem;
 
     @include center;
     cursor: pointer;
 
-    @include respond(tab-port1){
-        opacity: 1;
-        width: 100%;
-        position: relative;
-        transform: translate(0,0);
-        top: 0;
-        left: 0;
-        margin-bottom: 3rem;
+    @include respond(tab-port1) {
+      opacity: 1;
+      width: 100%;
+      position: relative;
+      transform: translate(0, 0);
+      top: 0;
+      left: 0;
+      margin-bottom: 3rem;
+      pointer-events: none;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 3px;
+      transition: all 2s ease;
+      @include respond(phone) {
         pointer-events: none;
+      }
     }
 
-
-
-    
-
-    img{
-        width: 100%;
-        border-radius: 3px;
-        transition: all 2s ease;
-        @include respond(phone){
-            pointer-events: none;
-    
-        }
+    &.inView {
+      opacity: 1;
+      cursor: pointer;
+      animation: fade 0.7s;
+    }
+    &.resize {
+      opacity: 1;
+      width: 100%;
+      transform: translate(0, 0);
+      top: 0;
+      left: 0;
+      position: static;
     }
 
-    &.inView{
-        opacity: 1;
-        cursor: pointer;
-        animation: fade .7s;
-    }
-    &.resize{
-        opacity: 1;
-        width: 100%;
-        transform: translate(0,0);
-        top:0;
-        left: 0;
-        position: static;
-
+    &.top-left {
+      top: 0;
+      left: 10rem;
+      width: 45%;
+      transform: translate(0, 0);
+      // margin: 4rem;
     }
 
-&.top-left{
-    top:0;
-    left:10rem;
-    width: 45%;
-    transform: translate(0,0);
-    // margin: 4rem;
+    &.top-right {
+      top: 0;
+      right: 10rem;
+      width: 45%;
+      transform: translate(0, 0);
+    }
+    &.bottom-left {
+      bottom: 0;
+      left: 10rem;
+      width: 45%;
+      transform: translate(0, -50%);
+      // margin: 4rem;
+    }
 
-}
-
-&.top-right{
-    top:0;
-    right:10rem;
-    width: 45%;
-    transform: translate(0,0);
-
-
-}
-&.bottom-left{
-    bottom:0;
-    left:10rem;
-    width: 45%;
-    transform: translate(0,-50%);
-    // margin: 4rem;
-
-}
-
-&.bottom-right{
-    bottom:0;
-    right:10rem;
-    width: 45%;
-    transform: translate(0,-50%);
-
-
-}
-}
-
-   
+    &.bottom-right {
+      bottom: 0;
+      right: 10rem;
+      width: 45%;
+      transform: translate(0, -50%);
+    }
+  }
 }

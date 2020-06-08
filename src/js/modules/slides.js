@@ -1,8 +1,8 @@
-import { elements } from './DOMelements';
+import { elements } from "./DOMelements";
 
 // 1. Selectors
 // console.log(window.innerHeight)
-if (window.innerWidth >= 850 && elements.mainTag.classList.contains('home')) {
+if (window.innerWidth >= 850 && elements.mainTag.classList.contains("home")) {
   let currentSlide = 0;
   let z = 1;
 
@@ -26,7 +26,7 @@ if (window.innerWidth >= 850 && elements.mainTag.classList.contains('home')) {
 
   const moveImage = () => {
     elements.imgs.forEach((img, i) => {
-      img.classList.remove('inView');
+      img.classList.remove("inView");
       img.style.opacity = 0;
 
       const randomX = Math.floor(Math.random() * 4 + 1) * 25;
@@ -49,16 +49,16 @@ if (window.innerWidth >= 850 && elements.mainTag.classList.contains('home')) {
 
   const updateImage = () => {
     elements.imgs[currentSlide].style.zIndex = z;
-    elements.imgs[currentSlide].classList.add('inView');
+    elements.imgs[currentSlide].classList.add("inView");
     elements.imgs[currentSlide].style.opacity = 1;
   };
 
-  const handleSlides = e => {
+  const handleSlides = (e) => {
     if (e.keyCode === 37) {
       prev();
       moveImage();
       updateImage();
-    } else if (e.keyCode === 39 || e.type === 'click') {
+    } else if (e.keyCode === 39 || e.type === "click") {
       next();
       moveImage();
       updateImage();
@@ -69,8 +69,7 @@ if (window.innerWidth >= 850 && elements.mainTag.classList.contains('home')) {
   };
 
   // 3. Events
-  elements.imgGallery.addEventListener('click', handleSlides);
-  window.addEventListener('keydown', handleSlides);
-  window.addEventListener('load', handleSlides);
+  elements.imgGallery.addEventListener("click", handleSlides);
+  window.addEventListener("keydown", handleSlides);
+  window.addEventListener("load", handleSlides);
 }
-console.log(window);
