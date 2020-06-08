@@ -108,12 +108,12 @@ main {
   display: block; }
 
 ::-moz-selection {
-  color: #fff8f0;
-  background-color: #2e2e2e; }
+  color: black;
+  background-color: #f3e6d2; }
 
 ::selection {
-  color: #fff8f0;
-  background-color: #2e2e2e; }
+  color: black;
+  background-color: #f3e6d2; }
 
 a {
   color: inherit;
