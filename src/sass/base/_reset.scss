@@ -1,65 +1,18 @@
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-
-// html.open {
-//     overflow-y: hidden;
-//     -webkit-overflow-scrolling: none;
-// }
-
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-body {
-  background-color: $white;
-}
-main {
-  display: block;
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  outline: none;
 }
 
 ::selection {
-  color: $black;
   background-color: #f3e6d2;
-}
-
-a {
-  color: inherit;
-  background-color: transparent;
-  text-decoration: none;
-
-  &:focus {
-    // border: 1px solid blue;
-  }
-}
-
-ul {
-  list-style: none;
-}
-
-button * {
-  pointer-events: none;
-}
-
-img,
-embed,
-iframe,
-object,
-video {
-  display: block;
-  max-width: 100%;
-  border-style: none;
-}
-
-input,
-textarea,
-select,
-button {
-  color: inherit;
-  font: inherit;
-  letter-spacing: inherit;
+  color: var(--color-secondary);
 }

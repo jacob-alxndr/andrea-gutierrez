@@ -1,0 +1,48 @@
+.modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 5;
+  background-color: white;
+  opacity: 0;
+  // display: flex;
+  pointer-events: none;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s;
+
+  &__content {
+    grid-column: col-start 5 / col-end 8;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    img {
+      max-width: 100%;
+    }
+  }
+  .prev-btn,
+  .next-btn,
+  .close-btn {
+    cursor: pointer;
+  }
+  .prev-btn,
+  .next-btn {
+    justify-self: center;
+  }
+  .prev-btn {
+    grid-column: col-start 4 / col-end 4;
+  }
+  .next-btn {
+    grid-column: col-start 9 / col-end 9;
+  }
+
+  .close-btn {
+    grid-column: col-start 12 / col-end 12;
+    align-self: start;
+    padding-top: 5rem;
+  }
+}
+.open {
+  opacity: 1;
+  pointer-events: all;
+}

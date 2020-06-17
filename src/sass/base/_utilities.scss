@@ -1,10 +1,13 @@
 .u-container {
   max-width: 120rem;
   margin: 0 auto;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: var(--medium);
+  padding-right: var(--medium);
+  background-color: var(--grey1);
 }
-
 .u-center-text {
   text-align: center;
+}
+.u-right-text {
+  text-align: right;
 }
