@@ -28,22 +28,6 @@ if (window.innerWidth >= 850 && elements.mainTag.classList.contains("home")) {
     elements.imgs.forEach((img, i) => {
       img.classList.remove("inView");
       img.style.opacity = 0;
-
-      const randomX = Math.floor(Math.random() * 4 + 1) * 25;
-      const randomY = Math.floor(Math.random() * 4 + 1) * 25;
-
-      // console.log(randomY);
-      // img.style.transform = `translate(${randomX}px, ${randomY}px)`
-      // img.style.width = `50%`;
-      // if (i === 1) {
-      //   img.classList.add('top-left');
-      // } else if (i === 2) {
-      //   img.classList.add('top-right');
-      // } else if (i === 3) {
-      //   img.classList.add('bottom-left');
-      // } else if (i === 4) {
-      //   img.classList.add('bottom-right');
-      // }
     });
   };
 
@@ -63,9 +47,10 @@ if (window.innerWidth >= 850 && elements.mainTag.classList.contains("home")) {
       moveImage();
       updateImage();
     }
-    elements.span.innerHTML = ` 0${currentSlide + 1} / 0${
-      elements.imgs.length
-    }`;
+    let newSlide = currentSlide + 1;
+    elements.span.innerHTML = `${newSlide
+      .toString()
+      .padStart(2, 0)} / ${elements.imgs.length.toString().padStart(2, 0)}`;
   };
 
   // 3. Events

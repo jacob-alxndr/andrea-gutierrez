@@ -2,7 +2,7 @@
 main.portfolio {
   // display: grid;
   // grid-column: col-start 4/col-end 12;
-  // margin: 5rem 0 5rem 5rem;
+  margin-top: 5rem;
 
   // @include respond(tab-port1){
   //     grid-column: col-start 5/col-end 12;
@@ -16,23 +16,21 @@ main.portfolio {
   // // IMAGE GALLERY
   .image-gallery {
     position: static;
-    margin-top: 5rem;
+
     margin-bottom: 5rem;
     display: grid;
     // grid-template-columns: repeat(auto-fit, minmax(55rem, 1fr));
-    grid-template-columns: [gallery-start] 1fr [content] repeat(
-        6,
-        [gal-start] 1fr [gal-end]
-      ) [content-end] 1fr [gallery-end];
+    grid-template-columns:
+      [gallery-start] 1fr [content] repeat(6, [gal-start] 1fr [gal-end])
+      [content-end] 1fr [gallery-end];
     grid-row-gap: 10rem;
     align-content: flex-start;
 
     @include respond(tab-port1) {
-      grid-row-gap: 4rem;
-    }
-
-    @include respond(tab-port1) {
       grid-row-gap: 8rem;
+    }
+    @include respond(phone) {
+      margin-top: 0;
     }
 
     :nth-child(odd) {
@@ -75,6 +73,10 @@ main.portfolio {
     transform: translate(0, 0);
     cursor: default;
 
+    & img:not(:first-of-type) {
+      display: none;
+    }
+
     &:hover img {
       @include boxShadow;
       transform: translateY(-10px);
@@ -94,7 +96,7 @@ main.portfolio {
       left: 0;
       transform: translate(0, 0);
       margin-bottom: 0rem;
-      pointer-events: none;
+
       flex-direction: column-reverse;
       align-items: flex-start;
     }
@@ -105,7 +107,6 @@ main.portfolio {
       transform: rotateZ(-90deg);
       white-space: nowrap;
       margin-right: 3rem;
-      // margin-bottom: 1rem;
       animation: fade 1.8s ease-in-out;
 
       @include respond(phone) {
@@ -123,7 +124,6 @@ main.portfolio {
       animation: fadeIn 1.2s ease-in-out;
       transition: all 0.5s;
       @include respond(phone) {
-        pointer-events: none;
       }
     }
   }

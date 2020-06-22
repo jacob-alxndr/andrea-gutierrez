@@ -5,21 +5,29 @@
   z-index: 5;
   background-color: white;
   opacity: 0;
-  // display: flex;
   pointer-events: none;
-  justify-content: center;
-  align-items: center;
   transition: opacity 1s;
+  overflow-y: hidden;
 
   &__content {
-    grid-column: col-start 5 / col-end 8;
+    height: 100%;
+    grid-column: col-start 4 / col-end 9;
     display: flex;
     justify-items: center;
+    justify-content: space-between;
     align-items: center;
     img {
       max-width: 100%;
     }
+    @include respond(tab-port2) {
+      grid-column: page-start/ page-end;
+    }
   }
+
+  &__img {
+    max-width: 50rem;
+  }
+
   .prev-btn,
   .next-btn,
   .close-btn {
@@ -28,18 +36,19 @@
   .prev-btn,
   .next-btn {
     justify-self: center;
-  }
-  .prev-btn {
-    grid-column: col-start 4 / col-end 4;
-  }
-  .next-btn {
-    grid-column: col-start 9 / col-end 9;
+    padding: 2rem;
   }
 
   .close-btn {
     grid-column: col-start 12 / col-end 12;
     align-self: start;
     padding-top: 5rem;
+    @include respond(tab-port2) {
+      grid-column: col-start 1 / col-end 12;
+      align-self: start;
+      padding-top: 0;
+      justify-self: center;
+    }
   }
 }
 .open {

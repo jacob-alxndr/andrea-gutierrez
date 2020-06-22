@@ -12,6 +12,12 @@ html {
   outline: none;
 }
 
+body {
+  &.noscroll {
+    overflow-y: hidden;
+  }
+}
+
 ::selection {
   background-color: #f3e6d2;
   color: var(--color-secondary);
