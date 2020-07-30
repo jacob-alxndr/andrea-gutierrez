@@ -1,0 +1,23 @@
+@use '../abstracts/mix';
+.RowContainer {
+  grid-column: 1/-1;
+  // background-color: yellowgreen;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__item {
+    max-width: 18vw;
+  }
+  &:first-child {
+    justify-content: flex-start;
+  }
+  &:nth-child(odd) {
+    justify-content: flex-start;
+  }
+  &:nth-child(3n + 3) {
+    margin-right: 20rem;
+    justify-content: center;
+  }
+}

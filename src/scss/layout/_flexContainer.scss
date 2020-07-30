@@ -1,0 +1,19 @@
+@use '../abstracts/mix';
+
+.FlexContainer {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  // background-color: rgb(249, 255, 158);
+  .column {
+    flex-direction: column;
+  }
+  .center {
+    justify-content: center;
+  }
+
+  @include mix.respond(phone) {
+    background-color: blue;
+    flex-direction: column;
+  }
+}

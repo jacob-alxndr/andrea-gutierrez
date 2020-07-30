@@ -1,0 +1,27 @@
+.Header {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+  width: 100%;
+  max-height: 90vh;
+  justify-content: center;
+
+  position: sticky;
+  position: -webkit-sticky;
+  top: var(--medium); /* required */
+  // background-color: rgb(255, 112, 112);
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__name {
+    white-space: nowrap;
+    margin-bottom: var(--small);
+  }
+  &__counter {
+    align-self: flex-end;
+  }
+}

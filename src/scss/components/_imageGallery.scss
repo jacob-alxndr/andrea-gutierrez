@@ -1,0 +1,10 @@
+.ImageGallery {
+  width: 100%;
+  flex: 2.8;
+  display: grid;
+  gap: var(--large) 0;
+  grid-template-columns: 0.5fr repeat(10, 1fr) 0.5fr;
+  padding: 0 var(--xxxl) var(--small) var(--large);
+  // background-color: rgb(155, 67, 255);
+}
+// [page-start] 1fr [content] repeat(12, [col-start] 1fr [col-end]) [content-end] 1fr [page-end];

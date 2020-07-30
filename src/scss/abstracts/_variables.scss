@@ -1,0 +1,29 @@
+:root {
+  // COLORS
+  --color-primary: #f3e6d2; //#f8f8f8
+  --color-secondary: #1d1d1d;
+  --white: #fdfdfd;
+  --grey1: #e0e0e0;
+  --grey2: #8b8b8b;
+  --grey3: #5c5c5c;
+  --black: #1d1d1d;
+
+  //TYPE SCALE
+  --h1: calc(4.5rem + 0.52vw);
+  --h2: calc(3rem + 0.52vw);
+  --h3: calc(2.2rem + 0.52vw);
+  --h4: calc(1.6rem + 0.52vw);
+  --h5: calc(1.4rem + 0.52vw);
+  --p-small: calc(1rem + 0.12vw);
+
+  //SPACING
+  --radius: 0.3rem;
+  --xxs: 0.5rem;
+  --xs: 1rem;
+  --small: 2rem;
+  --medium: 4rem;
+  --large: 6rem;
+  --xl: 8rem;
+  --xxl: 10rem;
+  --xxxl: 18rem;
+}

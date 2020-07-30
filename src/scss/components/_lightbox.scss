@@ -1,0 +1,45 @@
+@use '../abstracts/mix';
+
+.Lightbox {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 3;
+  // position: relative;
+
+  a {
+    top: var(--medium);
+    right: var(--xxl);
+    position: absolute;
+    font-size: (--h6);
+    text-decoration: none;
+  }
+
+  button {
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: transparent;
+    margin: 0 6rem;
+    padding: 0.5rem;
+    border-radius: var(--radius);
+    border: 1px solid transparent;
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+
+  &__container {
+    width: 50rem;
+    position: relative;
+    overflow: hidden;
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+}
