@@ -7,9 +7,10 @@
   align-items: center;
   justify-content: center;
   flex: 3;
-  // position: relative;
+  position: relative;
 
-  a {
+  a,
+  .close {
     top: var(--medium);
     right: var(--xxl);
     position: absolute;
@@ -33,8 +34,9 @@
   }
 
   &__container {
-    width: 50rem;
-    position: relative;
+    max-width: 60vh;
+    // top: 50%;
+    // position: absolute;
     overflow: hidden;
 
     &:focus,

@@ -21,6 +21,7 @@ export default class App extends Component {
     this.setState({ currentIndex: i });
   }
   async componentDidMount() {
+    // console.log("App", "Mount");
     const data = await getContent();
     const imageSet = data.filter((card) => card.type === "post-gallery");
     const galleries = imageSet.map((set) => {
@@ -60,6 +61,7 @@ export default class App extends Component {
               render={() => <Home imageSet={this.state.imageSet} />}
             />
             <Route
+              key="portfolio"
               exact
               path="/portfolio"
               render={(routeProps) => (
@@ -70,16 +72,18 @@ export default class App extends Component {
               )}
             />
             <Route
+              key="modal"
               exact
               path="/portfolio/:id"
               render={(routeProps) => (
                 <Modal
+                  history={routeProps.history}
                   imageSet={routeProps.location.state}
                   updateIndex={this.updateIndex}
                 />
               )}
             />
-            <Route exact path="/contact" component={Contact} />
+            <Route exact key="contact" path="/contact" component={Contact} />
           </Switch>
         </div>
       </Router>

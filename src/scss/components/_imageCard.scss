@@ -3,14 +3,16 @@
   cursor: pointer;
   // @include mix.test();
 
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  // transition: all 1s ease;
+
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
   }
   &__container {
-    margin-bottom: var(--xxs);
-    border-radius: 3px;
     overflow: hidden;
+    // min-height: 30rem;
+    // border-radius: 3px;
   }
   &.home {
     opacity: 0;
@@ -28,12 +30,16 @@
         transform: none;
       }
     }
+    img {
+      margin-bottom: 0;
+    }
   }
   img {
     width: 100%;
     display: block;
     height: auto;
     object-fit: cover;
+    margin-bottom: var(--xxs);
   }
   a {
     color: var(--black);

@@ -1,17 +1,20 @@
 import React, { Component } from "react";
 import ImageCard from "./ImageCard";
-import { Link } from "react-router-dom";
+
 export default class Lightbox extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isDisplayed: [],
+      yAxis: 0,
     };
     this.updateDisplay = this.updateDisplay.bind(this);
     this.handleDirection = this.handleDirection.bind(this);
   }
 
   componentDidMount() {
+    // console.log("Lightbox", "Mount");
+
     const displayedList = Array.from({
       length: this.props.imageSet.length,
     }).map((img, i) => (i === 0 ? true : false));
@@ -68,7 +71,9 @@ export default class Lightbox extends Component {
     this.props.isModal
       ? (lightBox = (
           <div className="Lightbox">
-            <Link to="/portfolio"> close</Link>
+            <button className={"close"} onClick={this.props.history.goBack}>
+              close
+            </button>
             <button onClick={this.handleDirection}>prev</button>
             <div className="Lightbox__container" tabIndex={0}>
               {this.props.imageSet.map((img, i) => {

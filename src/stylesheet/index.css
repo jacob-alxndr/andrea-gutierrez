@@ -154,14 +154,12 @@ html {
 
 .ImageCard {
   cursor: pointer;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
 .ImageCard:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
 }
 .ImageCard__container {
-  margin-bottom: var(--xxs);
-  border-radius: 3px;
   overflow: hidden;
 }
 .ImageCard.home {
@@ -181,11 +179,15 @@ html {
 .ImageCard.home.display:hover {
   transform: none;
 }
+.ImageCard.home img {
+  margin-bottom: 0;
+}
 .ImageCard img {
   width: 100%;
   display: block;
   height: auto;
   object-fit: cover;
+  margin-bottom: var(--xxs);
 }
 .ImageCard a {
   color: var(--black);
@@ -193,11 +195,11 @@ html {
 
 .ImageGallery {
   width: 100%;
-  flex: 2.8;
+  flex: 3;
   display: grid;
   gap: var(--large) 0;
   grid-template-columns: 0.5fr repeat(10, 1fr) 0.5fr;
-  padding: 0 var(--xxxl) var(--small) var(--large);
+  padding: 0 var(--xxl) var(--small) var(--large);
 }
 
 .Lightbox {
@@ -207,8 +209,10 @@ html {
   align-items: center;
   justify-content: center;
   flex: 3;
+  position: relative;
 }
-.Lightbox a {
+.Lightbox a,
+.Lightbox .close {
   top: var(--medium);
   right: var(--xxl);
   position: absolute;
@@ -229,12 +233,18 @@ html {
   outline: none;
 }
 .Lightbox__container {
-  width: 50rem;
-  position: relative;
+  max-width: 60vh;
   overflow: hidden;
 }
 .Lightbox__container:focus, .Lightbox__container:active {
   outline: none;
+}
+
+.Modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .FlexContainer {
@@ -277,7 +287,6 @@ html {
   justify-content: flex-start;
 }
 .RowContainer:nth-child(3n+3) {
-  margin-right: 20rem;
   justify-content: center;
 }
 

@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Lightbox from "../components/Lightbox";
 import Container from "./Container";
 import FlexContainer from "./FlexContainer";
+import { gsap } from "gsap";
 
 export default class Home extends Component {
   constructor(props) {
@@ -11,6 +12,8 @@ export default class Home extends Component {
       currentIndex: 0,
       imageSet: this.props.imageSet,
     };
+    this.header = null;
+    this.tl = gsap.timeline({ paused: true });
     this.updateIndex = this.updateIndex.bind(this);
   }
 
@@ -24,6 +27,7 @@ export default class Home extends Component {
         <Container>
           <FlexContainer direction="row">
             <Header
+              ref={(node) => (this.header = node)}
               title
               name
               counter
