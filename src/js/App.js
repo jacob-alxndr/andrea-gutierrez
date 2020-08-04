@@ -91,7 +91,9 @@ export default class App extends Component {
               )}
             />
             <Route exact key="contact" path="/contact" component={Contact} />
-            <Route path="*" component={() => <Redirect to="/" />} />
+            <Route path="/*">
+              <Redirect to="/" />
+            </Route>
           </Switch>
         </div>
       </Router>
