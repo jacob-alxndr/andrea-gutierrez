@@ -7,6 +7,10 @@
   align-items: center;
   justify-content: center;
   flex: 3;
+  @include mix.respond(tab-port1) {
+    flex-direction: column;
+    align-items: flex-end;
+  }
 
   .button {
     cursor: pointer;
@@ -24,11 +28,18 @@
       margin: 0;
       font-size: (--h6);
       text-decoration: none;
+
+      @include mix.respond(tab-port1) {
+        position: relative;
+      }
     }
     &--prev,
     &--next {
       padding: 0.5rem;
       margin: 0 6rem;
+      @include mix.respond(tab-port1) {
+        display: none;
+      }
     }
     &:focus,
     &:active {
@@ -38,8 +49,6 @@
 
   &__container {
     max-width: 60vh;
-    // top: 50%;
-    // position: absolute;
     overflow: hidden;
 
     &:focus,

@@ -23,14 +23,14 @@ export default class Contact extends Component {
               />
 
               <Paragraph>
-                <p>
+                <p className="paragraph">
                   I am a film photographer based in the Bay Area. I focused on
                   conceptualizing and directing photo shoots whether they are
                   personal or commercial projects. My work is not limited to,
                   but mainly inspired by composition, color and expression. I am
                   self-represented and take clients on a regular basis.
                 </p>
-                <p>
+                <p className="paragraph">
                   email:
                   <a
                     href="mailto:gtzs.andrea@gmail.com"
@@ -40,7 +40,7 @@ export default class Contact extends Component {
                     gtzs.andrea@gmail.com
                   </a>
                 </p>
-                <p>
+                <p className="paragraph">
                   instagram:
                   <a
                     href="https://www.instagram.com/_agutierrezs/"

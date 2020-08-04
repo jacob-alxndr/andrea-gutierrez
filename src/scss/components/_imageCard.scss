@@ -6,9 +6,15 @@
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
   position: relative;
   // transition: all 1s ease;
+  @include mix.respond(tab-port1) {
+    margin-bottom: var(--small);
+  }
 
   &:hover {
     transform: translateY(-10px);
+    @include mix.respond(tab-port1) {
+      transform: none;
+    }
   }
   & .overlay {
     position: absolute;
@@ -31,6 +37,12 @@
     visibility: hidden;
     transition: opacity 3s ease;
     width: 0;
+    @include mix.respond(tab-port1) {
+      opacity: 1;
+      pointer-events: all;
+      visibility: visible;
+      width: 100%;
+    }
     &.display {
       width: 100%;
       visibility: visible;

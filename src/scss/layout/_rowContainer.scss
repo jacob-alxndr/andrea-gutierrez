@@ -9,6 +9,9 @@
   min-height: 45rem;
   &__item {
     max-width: 18vw;
+    @include mix.respond(tab-port1) {
+      max-width: 100%;
+    }
   }
   &:first-child {
     justify-content: flex-start;

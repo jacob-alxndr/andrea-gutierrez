@@ -10,8 +10,6 @@ import Home from "./layout/Home";
 import Portfolio from "./layout/Portfolio";
 import Contact from "./layout/Contact";
 import Modal from "./components/Modal";
-import Container from "./layout/Container";
-import FlexContainer from "./layout/FlexContainer";
 
 export default class App extends Component {
   constructor(props) {

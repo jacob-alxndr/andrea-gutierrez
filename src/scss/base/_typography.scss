@@ -1,5 +1,5 @@
 // @import url("https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,700");
-
+@use '../abstracts/mix';
 @font-face {
   font-family: "JetBrains Mono";
   font-weight: 400;
@@ -44,6 +44,7 @@ p {
 }
 a {
   color: var(--black);
+  font-size: var(--h6);
 }
 
 //UTILITY TYPOGRAPHY
@@ -53,6 +54,9 @@ a {
   line-height: 1.3;
   max-width: 43rem;
   margin-bottom: var(--xs);
+  @include mix.respond(tab-port1) {
+    font-size: var(--h5);
+  }
 
   &__small {
     font-size: 1rem;

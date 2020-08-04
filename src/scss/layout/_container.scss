@@ -1,9 +1,12 @@
+@use '../abstracts/mix';
+
 .Container {
-  // display: flex;
   min-height: 100vh;
   width: 100%;
-  // justify-content: center;
-  // align-items: center;
   padding: var(--medium) var(--xl);
   background-color: var(--white);
+
+  @include mix.respond(tab-port1) {
+    padding: var(--small);
+  }
 }

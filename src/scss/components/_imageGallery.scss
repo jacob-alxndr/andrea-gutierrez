@@ -1,13 +1,14 @@
+@use '../abstracts/mix';
 .ImageGallery {
   width: 100%;
   flex: 3;
   gap: 0 var(--medium);
   display: flex;
   flex-direction: column;
-
-  & > *:not(:last-child) {
-    // margin-bottom: 4rem;
+  @include mix.respond(tab-port1) {
+    padding: 0;
   }
+
   // grid-template-columns: 0.5fr repeat(10, 1fr) 0.5fr;
   // grid-auto-rows: minmax(2rem, 1fr);
   padding: 0 var(--xxl) var(--small) var(--large);

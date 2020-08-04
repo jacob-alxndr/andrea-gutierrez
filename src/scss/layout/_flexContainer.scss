@@ -11,9 +11,13 @@
   }
   .center {
     justify-content: center;
+    @include mix.respond(tab-port1) {
+      justify-content: flex-start;
+    }
   }
 
   @include mix.respond(tab-port1) {
+    justify-content: flex-start;
     flex-direction: column;
   }
 }
