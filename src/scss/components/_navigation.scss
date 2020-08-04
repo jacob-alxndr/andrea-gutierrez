@@ -9,7 +9,7 @@
   a {
     text-decoration: none;
     white-space: nowrap;
-    transition: all 0.2s ease;
+    // transition: all 0.2s ease;
     border-bottom: 1px solid transparent;
     color: var(--color-secondary);
 
@@ -27,5 +27,6 @@
   &__item {
     display: flex;
     justify-content: flex-start;
+    overflow: hidden;
   }
 }

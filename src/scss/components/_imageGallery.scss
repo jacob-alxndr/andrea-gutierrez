@@ -1,9 +1,15 @@
 .ImageGallery {
   width: 100%;
   flex: 3;
-  display: grid;
-  gap: var(--large) 0;
-  grid-template-columns: 0.5fr repeat(10, 1fr) 0.5fr;
+  gap: 0 var(--medium);
+  display: flex;
+  flex-direction: column;
+
+  & > *:not(:last-child) {
+    // margin-bottom: 4rem;
+  }
+  // grid-template-columns: 0.5fr repeat(10, 1fr) 0.5fr;
+  // grid-auto-rows: minmax(2rem, 1fr);
   padding: 0 var(--xxl) var(--small) var(--large);
   // background-color: rgb(155, 67, 255);
 }

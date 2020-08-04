@@ -71,10 +71,18 @@ export default class Lightbox extends Component {
     this.props.isModal
       ? (lightBox = (
           <div className="Lightbox">
-            <button className={"close"} onClick={this.props.history.goBack}>
+            <button
+              className="button button--close"
+              onClick={this.props.history.goBack}
+            >
               close
             </button>
-            <button onClick={this.handleDirection}>prev</button>
+            <button
+              className="button button--prev"
+              onClick={this.handleDirection}
+            >
+              prev
+            </button>
             <div className="Lightbox__container" tabIndex={0}>
               {this.props.imageSet.map((img, i) => {
                 return (
@@ -91,7 +99,12 @@ export default class Lightbox extends Component {
                 );
               })}
             </div>
-            <button onClick={this.handleDirection}>next</button>
+            <button
+              className="button button--next"
+              onClick={this.handleDirection}
+            >
+              next
+            </button>
           </div>
         ))
       : (lightBox = (

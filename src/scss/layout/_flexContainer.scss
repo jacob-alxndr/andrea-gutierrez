@@ -1,6 +1,7 @@
 @use '../abstracts/mix';
 
 .FlexContainer {
+  position: relative;
   width: 100%;
   min-height: 90vh;
   display: flex;
@@ -12,8 +13,7 @@
     justify-content: center;
   }
 
-  @include mix.respond(phone) {
-    background-color: blue;
+  @include mix.respond(tab-port1) {
     flex-direction: column;
   }
 }

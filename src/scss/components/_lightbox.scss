@@ -7,26 +7,29 @@
   align-items: center;
   justify-content: center;
   flex: 3;
-  position: relative;
 
-  a,
-  .close {
-    top: var(--medium);
-    right: var(--xxl);
-    position: absolute;
-    font-size: (--h6);
-    text-decoration: none;
-  }
-
-  button {
+  .button {
     cursor: pointer;
     font-family: inherit;
     font-size: inherit;
     background-color: transparent;
-    margin: 0 6rem;
-    padding: 0.5rem;
+
     border-radius: var(--radius);
     border: 1px solid transparent;
+
+    &--close {
+      top: 0;
+      right: 0;
+      position: absolute;
+      margin: 0;
+      font-size: (--h6);
+      text-decoration: none;
+    }
+    &--prev,
+    &--next {
+      padding: 0.5rem;
+      margin: 0 6rem;
+    }
     &:focus,
     &:active {
       outline: none;

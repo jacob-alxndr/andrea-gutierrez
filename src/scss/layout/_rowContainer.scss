@@ -2,11 +2,11 @@
 .RowContainer {
   grid-column: 1/-1;
   // background-color: yellowgreen;
-
+  // @include mix.test();
   display: flex;
   justify-content: flex-end;
   align-items: center;
-
+  min-height: 45rem;
   &__item {
     max-width: 18vw;
   }

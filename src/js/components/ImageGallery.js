@@ -13,26 +13,42 @@ export default class ImageGallery extends Component {
       justifyContent: [],
     };
     this.myElements = [];
+    this.myTriggers = [];
   }
 
   async componentDidMount() {
+    console.log(this.myTriggers);
+    this.myTriggers = this.myTriggers.map((el) => el.myRef.current);
     this.myElements = this.myElements.map((el) => el.imageRef.current);
-    this.myElements.forEach((el) => {
+    this.myElements.forEach((el, i) => {
       const tl = gsap.timeline({
         paused: true,
         scrollTrigger: {
-          trigger: el,
-          start: "start 70%",
-          minHeight: "10rem",
-          end: "bottom 75å%",
+          trigger: this.myTriggers[i],
+          start: "start 65%",
+          end: "start 70%",
+          // scrub: 2,
+
           // markers: true,
         },
       });
-      tl.from(el, 0.5, {
-        opacity: 0,
-        y: 20,
-        clearProps: "all",
-      });
+      tl.fromTo(
+        el,
+        1.3,
+
+        {
+          skewX: 30,
+          scale: 2,
+        },
+        {
+          xPercent: 100,
+          skewX: 0,
+          transformOrigin: "0% 100%",
+          ease: "expo.inOut",
+        }
+        // skewY: 4,
+        // clearProps: "all",
+      );
     });
   }
 
@@ -53,7 +69,10 @@ export default class ImageGallery extends Component {
             const { heroSrc, title, slug, year, alt, link, images } = gallery;
 
             return (
-              <RowContainer key={slug}>
+              <RowContainer
+                key={slug}
+                ref={(node) => (this.myTriggers[i] = node)}
+              >
                 <ImageCard
                   ref={(node) => (this.myElements[i] = node)}
                   index={i}

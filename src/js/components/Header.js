@@ -10,7 +10,7 @@ export default class Header extends Component {
     this.tl = gsap.timeline({ paused: true });
   }
   componentDidMount() {
-    this.tl.from(this.myElement, 0.75, { opacity: 0 }).play();
+    this.tl.from(this.myElement, 0.5, { opacity: 0 }).play();
   }
   render() {
     const { title, name, counter, center } = this.props;

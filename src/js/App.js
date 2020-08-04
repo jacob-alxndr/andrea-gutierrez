@@ -5,6 +5,8 @@ import Home from "./layout/Home";
 import Portfolio from "./layout/Portfolio";
 import Contact from "./layout/Contact";
 import Modal from "./components/Modal";
+import Container from "./layout/Container";
+import FlexContainer from "./layout/FlexContainer";
 
 export default class App extends Component {
   constructor(props) {
@@ -84,6 +86,15 @@ export default class App extends Component {
               )}
             />
             <Route exact key="contact" path="/contact" component={Contact} />
+            <Route
+              component={
+                <Container>
+                  <FlexContainer direction="row">
+                    <h1>404</h1>
+                  </FlexContainer>
+                </Container>
+              }
+            />
           </Switch>
         </div>
       </Router>
