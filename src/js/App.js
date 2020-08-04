@@ -26,7 +26,6 @@ export default class App extends Component {
     this.setState({ currentIndex: i });
   }
   async componentDidMount() {
-    // console.log("App", "Mount");
     const data = await getContent();
     const imageSet = data.filter((card) => card.type === "post-gallery");
     const galleries = imageSet.map((set) => {

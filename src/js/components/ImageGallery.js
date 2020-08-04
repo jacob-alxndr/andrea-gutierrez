@@ -17,7 +17,6 @@ export default class ImageGallery extends Component {
   }
 
   async componentDidMount() {
-    console.log(this.myTriggers);
     this.myTriggers = this.myTriggers.map((el) => el.myRef.current);
     this.myElements = this.myElements.map((el) => el.imageRef.current);
     this.myElements.forEach((el, i) => {
