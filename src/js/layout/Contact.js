@@ -24,7 +24,7 @@ export default class Contact extends Component {
 
               <Paragraph>
                 <p className="paragraph">
-                  I am a film photographer based in the Bay Area. I focused on
+                  I am a film photographer based in the Bay Area. I focus on
                   conceptualizing and directing photo shoots whether they are
                   personal or commercial projects. My work is not limited to,
                   but mainly inspired by composition, color and expression. I am
