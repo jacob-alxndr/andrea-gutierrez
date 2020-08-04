@@ -1,5 +1,10 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import { getContent } from "./helpers/getContent";
 import Home from "./layout/Home";
 import Portfolio from "./layout/Portfolio";
@@ -86,15 +91,7 @@ export default class App extends Component {
               )}
             />
             <Route exact key="contact" path="/contact" component={Contact} />
-            <Route
-              component={
-                <Container>
-                  <FlexContainer direction="row">
-                    <h1>404</h1>
-                  </FlexContainer>
-                </Container>
-              }
-            />
+            <Route path="*" component={() => <Redirect to="/" />} />
           </Switch>
         </div>
       </Router>
