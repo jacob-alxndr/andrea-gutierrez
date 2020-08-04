@@ -278,6 +278,11 @@ html {
 @media only screen and (max-width: 60em) {
   .Lightbox {
     flex-direction: column;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .Lightbox {
     align-items: flex-end;
   }
 }
