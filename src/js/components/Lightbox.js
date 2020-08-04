@@ -13,8 +13,6 @@ export default class Lightbox extends Component {
   }
 
   componentDidMount() {
-    // console.log("Lightbox", "Mount");
-
     const displayedList = Array.from({
       length: this.props.imageSet.length,
     }).map((img, i) => (i === 0 ? true : false));
@@ -49,7 +47,6 @@ export default class Lightbox extends Component {
       if (index - 1 < 0) {
         newDisplayed[this.state.isDisplayed.length - 1] = true;
       } else if (index - 1 >= 0) {
-        console.log("else if");
         newDisplayed[index - 1] = true;
       }
     } else if (back === false) {
