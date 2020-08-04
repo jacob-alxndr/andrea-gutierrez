@@ -299,6 +299,7 @@ html {
 }
 @media only screen and (max-width: 60em) {
   .Lightbox .button--close {
+    margin-bottom: var(--small);
     position: relative;
   }
 }

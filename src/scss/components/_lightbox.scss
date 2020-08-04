@@ -30,6 +30,7 @@
       text-decoration: none;
 
       @include mix.respond(tab-port1) {
+        margin-bottom: var(--small);
         position: relative;
       }
     }
