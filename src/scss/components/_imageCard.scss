@@ -3,7 +3,7 @@
   cursor: pointer;
   // @include mix.test();
   overflow: hidden;
-  // transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
   position: relative;
   // transition: all 1s ease;
   @include mix.respond(tab-port1) {

@@ -194,6 +194,7 @@ html {
 .ImageCard {
   cursor: pointer;
   overflow: hidden;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
   position: relative;
 }
 @media only screen and (max-width: 60em) {
