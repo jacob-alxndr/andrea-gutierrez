@@ -22,14 +22,18 @@ export default class Header extends Component {
         style={{ justifyContent: center ? "center" : "space-between" }}
       >
         {isHome && <Banner content="welcome" />}
-        <div className="Header__content">
-          {isHome && (
-            <div className="Header__name">
-              <span>Andrea Gutierrez</span>
-            </div>
-          )}
+        {isHome ? (
+          <div className="Header__content">
+            {isHome && (
+              <div className="Header__name">
+                <span>Andrea Gutierrez</span>
+              </div>
+            )}
+            <Navigation />
+          </div>
+        ) : (
           <Navigation />
-        </div>
+        )}
 
         {isHome && (
           <Counter

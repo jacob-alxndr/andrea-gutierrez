@@ -40,7 +40,6 @@ export default class ImageCard extends Component {
     }
     return (
       <div
-        ref={this.imageRef}
         index={index}
         className={
           display
@@ -50,7 +49,12 @@ export default class ImageCard extends Component {
         style={this.props.isModal ? { pointerEvents: "none" } : {}}
       >
         {/* {this.props.match && <div className="overlay"></div>} */}
-        <div className="ImageCard__container" style={this.props.height}>
+
+        <div
+          ref={this.imageRef}
+          className="ImageCard__container"
+          style={this.props.height}
+        >
           <div className="ImageCard__content" onClick={this.handleClick}>
             <img
               // srcSet="./assets/img/img_sm--10.JPG 300w, ./assets/img/img_lg--10.JPG 1000w"

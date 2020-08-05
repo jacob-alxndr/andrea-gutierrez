@@ -108,6 +108,7 @@ html {
 
 .Counter {
   align-self: flex-end;
+  padding-bottom: var(--large);
 }
 @media only screen and (max-width: 60em) {
   .Counter {
@@ -174,10 +175,12 @@ html {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: var(--large);
 }
 @media only screen and (max-width: 60em) {
   .Header__content {
     flex-direction: column;
+    margin-top: 0;
   }
 }
 .Header__name {
@@ -191,7 +194,6 @@ html {
 .ImageCard {
   cursor: pointer;
   overflow: hidden;
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
   position: relative;
 }
 @media only screen and (max-width: 60em) {
@@ -206,12 +208,6 @@ html {
   .ImageCard:hover {
     transform: none;
   }
-}
-.ImageCard .overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: var(--white);
 }
 .ImageCard__text {
   display: block;
@@ -369,7 +365,7 @@ html {
 .Container {
   min-height: 100vh;
   width: 100%;
-  padding: var(--medium) var(--xl);
+  padding: var(--medium) var(--large);
   background-color: var(--white);
 }
 @media only screen and (max-width: 60em) {
@@ -383,7 +379,9 @@ html {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  min-height: 45rem;
+}
+.RowContainer:not(:last-child) {
+  margin-bottom: var(--medium);
 }
 .RowContainer__item {
   max-width: 18vw;

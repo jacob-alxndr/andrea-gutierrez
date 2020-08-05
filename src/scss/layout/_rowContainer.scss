@@ -2,11 +2,13 @@
 .RowContainer {
   grid-column: 1/-1;
   // background-color: yellowgreen;
-  // @include mix.test();
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  min-height: 45rem;
+
+  &:not(:last-child) {
+    margin-bottom: var(--medium);
+  }
   &__item {
     max-width: 18vw;
     @include mix.respond(tab-port1) {

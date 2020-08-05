@@ -28,19 +28,14 @@ export default class ImageGallery extends Component {
           end: "start 70%",
           // scrub: 2,
 
-          // markers: true,
+          markers: true,
         },
       });
-      tl.from(
-        el,
-        2,
-
-        {
-          opacity: 0,
-          // skewX: 30,
-          // scale: 2,
-        }
-      );
+      tl.from(el, 1, {
+        opacity: 0,
+        // skewX: 30,
+        // scale: 2,
+      });
     });
   }
 

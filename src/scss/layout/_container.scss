@@ -3,7 +3,7 @@
 .Container {
   min-height: 100vh;
   width: 100%;
-  padding: var(--medium) var(--xl);
+  padding: var(--medium) var(--large);
   background-color: var(--white);
 
   @include mix.respond(tab-port1) {

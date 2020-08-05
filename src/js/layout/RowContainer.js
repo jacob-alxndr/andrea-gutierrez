@@ -7,8 +7,11 @@ export default class RowContainer extends Component {
   }
   render() {
     return (
-      <div className="RowContainer" ref={this.myRef}>
-        <div className="RowContainer__item"> {this.props.children}</div>
+      <div className="RowContainer">
+        <div className="RowContainer__item" ref={this.myRef}>
+          {" "}
+          {this.props.children}
+        </div>
       </div>
     );
   }
