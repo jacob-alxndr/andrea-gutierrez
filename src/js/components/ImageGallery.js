@@ -33,17 +33,19 @@ export default class ImageGallery extends Component {
       });
       tl.fromTo(
         el,
-        1.3,
+        1,
 
         {
-          skewX: 30,
-          scale: 2,
+          opacity: 1,
+          // skewX: 30,
+          // scale: 2,
         },
         {
-          xPercent: 100,
-          skewX: 0,
-          transformOrigin: "0% 100%",
-          ease: "expo.inOut",
+          opacity: 0,
+          // xPercent: 100,
+          // skewX: 0,
+          // transformOrigin: "0% 100%",
+          // ease: "expo.inOut",
         }
         // skewY: 4,
         // clearProps: "all",
