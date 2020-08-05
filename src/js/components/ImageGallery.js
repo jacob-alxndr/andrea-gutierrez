@@ -28,7 +28,7 @@ export default class ImageGallery extends Component {
           end: "start 70%",
           // scrub: 2,
 
-          markers: true,
+          // markers: true,
         },
       });
       tl.from(el, 1, {
