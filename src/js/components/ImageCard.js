@@ -32,7 +32,6 @@ export default class ImageCard extends Component {
     return (
       <div
         index={index}
-        onClick={this.handleClick}
         className={
           display
             ? `ImageCard ${this.props.styles} display`
@@ -43,7 +42,11 @@ export default class ImageCard extends Component {
         {this.props.match && (
           <div className="overlay" ref={this.imageRef}></div>
         )}
-        <div className="ImageCard__container" style={this.props.height}>
+        <div
+          className="ImageCard__container"
+          onClick={this.handleClick}
+          style={this.props.height}
+        >
           <div className="ImageCard__content">
             <img
               // srcSet="./assets/img/img_sm--10.JPG 300w, ./assets/img/img_lg--10.JPG 1000w"

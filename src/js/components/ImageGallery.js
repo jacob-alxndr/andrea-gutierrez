@@ -49,7 +49,7 @@ export default class ImageGallery extends Component {
         }
         // skewY: 4,
         // clearProps: "all",
-      );
+      ).to(el, 0, { xPercent: 100 });
     });
   }
 
