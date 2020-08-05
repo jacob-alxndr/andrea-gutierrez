@@ -80,7 +80,7 @@ a {
 }
 @media only screen and (max-width: 60em) {
   .paragraph {
-    font-size: var(--h5);
+    font-size: var(--h6);
   }
 }
 .paragraph__small {

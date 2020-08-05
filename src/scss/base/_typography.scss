@@ -55,7 +55,7 @@ a {
   max-width: 43rem;
   margin-bottom: var(--xs);
   @include mix.respond(tab-port1) {
-    font-size: var(--h5);
+    font-size: var(--h6);
   }
 
   &__small {
