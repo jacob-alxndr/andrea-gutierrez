@@ -8,6 +8,9 @@
 
   &:not(:last-child) {
     margin-bottom: var(--medium);
+    @include mix.respond(tab-port1) {
+      margin-bottom: var(--xs);
+    }
   }
   &__item {
     max-width: 18vw;
@@ -22,7 +25,6 @@
     justify-content: flex-start;
   }
   &:nth-child(3n + 3) {
-    // margin-right: 20rem;
     justify-content: center;
   }
 }

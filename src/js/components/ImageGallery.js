@@ -26,16 +26,12 @@ export default class ImageGallery extends Component {
           trigger: this.myTriggers[i],
           start: "start 65%",
           end: "start 70%",
-          // scrub: 2,
-
           // markers: true,
         },
       });
       tl.from(el, 1, {
         opacity: 0,
         y: 15,
-        // skewX: 30,
-        // scale: 2,
       });
     });
   }

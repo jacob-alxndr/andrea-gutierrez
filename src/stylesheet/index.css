@@ -384,6 +384,11 @@ html {
 .RowContainer:not(:last-child) {
   margin-bottom: var(--medium);
 }
+@media only screen and (max-width: 60em) {
+  .RowContainer:not(:last-child) {
+    margin-bottom: var(--xs);
+  }
+}
 .RowContainer__item {
   max-width: 18vw;
 }
