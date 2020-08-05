@@ -13,7 +13,16 @@ export default class ImageCard extends Component {
     match && history.push(`${match.path}/${slug}`, images);
   }
   render() {
-    const { index, display, src, alt, title, year, link } = this.props;
+    const {
+      index,
+      display,
+      src,
+      alt,
+      title,
+      year,
+      link,
+      linkTitle,
+    } = this.props;
 
     let url;
     if (link) {
@@ -22,7 +31,7 @@ export default class ImageCard extends Component {
             <span>
               Collaboration w/{" "}
               <a target="_blank" rel="noopener noreferrer" href={link.url}>
-                {link.url}
+                {linkTitle}
               </a>
               .
             </span>
@@ -31,6 +40,7 @@ export default class ImageCard extends Component {
     }
     return (
       <div
+        ref={this.imageRef}
         index={index}
         className={
           display
@@ -39,27 +49,21 @@ export default class ImageCard extends Component {
         }
         style={this.props.isModal ? { pointerEvents: "none" } : {}}
       >
-        {this.props.match && (
-          <div className="overlay" ref={this.imageRef}></div>
-        )}
-        <div
-          className="ImageCard__container"
-          onClick={this.handleClick}
-          style={this.props.height}
-        >
-          <div className="ImageCard__content">
+        {/* {this.props.match && <div className="overlay"></div>} */}
+        <div className="ImageCard__container" style={this.props.height}>
+          <div className="ImageCard__content" onClick={this.handleClick}>
             <img
               // srcSet="./assets/img/img_sm--10.JPG 300w, ./assets/img/img_lg--10.JPG 1000w"
               // sizes="(max-width: 56.25em) 20vw, (max-width: 37.5) 30vw, 1000px"
               alt={alt}
               src={src}
             />
-            {link && (
-              <p className="ImageCard__text">
-                {title}, {year}. {url}
-              </p>
-            )}
-          </div>
+          </div>{" "}
+          {link && (
+            <p className="ImageCard__text">
+              {title}, {year}. {url}
+            </p>
+          )}
         </div>
       </div>
     );

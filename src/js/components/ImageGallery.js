@@ -31,25 +31,16 @@ export default class ImageGallery extends Component {
           // markers: true,
         },
       });
-      tl.fromTo(
+      tl.from(
         el,
-        1,
+        2,
 
         {
-          opacity: 1,
+          opacity: 0,
           // skewX: 30,
           // scale: 2,
-        },
-        {
-          opacity: 0,
-          // xPercent: 100,
-          // skewX: 0,
-          // transformOrigin: "0% 100%",
-          // ease: "expo.inOut",
         }
-        // skewY: 4,
-        // clearProps: "all",
-      ).to(el, 0, { xPercent: 100 });
+      );
     });
   }
 
@@ -67,7 +58,16 @@ export default class ImageGallery extends Component {
         {this.props.galleries
           .sort((a, b) => (a.position > b.position ? 1 : -1))
           .map((gallery, i) => {
-            const { heroSrc, title, slug, year, alt, link, images } = gallery;
+            const {
+              heroSrc,
+              title,
+              slug,
+              year,
+              alt,
+              link,
+              linkTitle,
+              images,
+            } = gallery;
 
             return (
               <RowContainer
@@ -89,6 +89,7 @@ export default class ImageGallery extends Component {
                   location={location}
                   history={history}
                   styles={""}
+                  linkTitle={linkTitle}
                   height={{ minHeight: "30rem" }}
                 />
               </RowContainer>

@@ -30,13 +30,14 @@ export default class App extends Component {
     const imageSet = data.filter((card) => card.type === "post-gallery");
     const galleries = imageSet.map((set) => {
       const { title, images, link, year } = set.data;
-
+      console.log(set.data.link_title[0]);
       const gallerySet = {
         title: title[0].text,
         heroSrc: set.data["hero-image"].url,
         alt: set.data["hero-image"].alt,
         year,
         link,
+        linkTitle: set.data.link_title[0] ? set.data.link_title[0].text : "",
         images: images.map((img) => img.image),
         slug: set.uid,
         position: set.data.position,
